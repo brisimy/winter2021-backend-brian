@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Variables, Arrays, and Objects</title>
+</head>
+<body>
+    <script>
+        //This level is the Global SCOPE
+        console.log("Hello World"); 
+        var myVariable = 10; 
+        let myOthewrVariable = 11; 
+
+        {
+        //This level is a LOCAL 
+        console.log(myOthewrVariable);
+        myVariable; 
+
+        var privateVariable = 100; 
+        let anActualPrivateVar = 200; 
+        console.log(anActualPrivateVar);
+
+        }
+        console.log(privateVariable);
+       // console.log(anActualPrivateVar);
+
+        //CONST VARIABLE 
+        const cannotBeChanged = 50; 
+        console.log(cannotBeChanged);
+        //const cannotBeChanged = 51; 
+
+        //var PINumber = 3.14;
+        const PINumber = 3.14;
+        //PINumber = 5;
+
+        const dbusername = "admin"
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Objects</title>
+</head>
+<body>
+    <script>
+        var myArray = [1,2,3,4];
+        var myObject = {
+            "first":1, 
+            "second":2, 
+            "third":3,
+            "fourth":4,
+            "a space": ""
+        };
+//A javascript object "key" is actually callled an Object's Property.
+//Objects can us Square Bracket Notation
+        console.log(myObject["third"]);
+//and also Dot Notation 
+        console.log(myObject.third);
+        //myObject.a space; Cannot use dot notation for keys with space as it end up being a syntax error. 
+//Compare Objects 
+let object1 = {
+    "number":3
+}; 
+
+let object2 = {
+    "number":3
+};
+
+if (object1 == object2) {
+    console.log("There objects are the same!")
+}
+
+//Copying Objects. 
+
+let number1 = 1; 
+let number2 = number1;
+number1 = 100;
+console.log(number2);
+//Doesn't work for objects as youy expect them to. 
+
+let objectA = {
+    "number":1
+};
+
+let objectB = objectA; 
+objectA.number = 100; 
+console.log(objectB.number);
+    </script> 
+</body>
+</html>
