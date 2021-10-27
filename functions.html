@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    function myFunction() {
+
+        console.log("Helllo there")
+    }
+
+    //Tells the function run its code. 
+
+    myFunction(); 
+    myFunction(); 
+
+
+    //A referenec to the function. 
+    myFunction; 
+
+    //Parameters: Special Variables that belong to a function, they are created in the parenthesis of the function definition. 
+
+    function multiply4thPower(number){
+    //let number = 6; 
+    let results = number * number * number * number;
+    console.log(results);
+    }
+    multiply4thPower(5); 
+    multiply4thPower(50); 
+    multiply4thPower(25); 
+
+
+
+// Arguments: The data that get passed to the Parameter. Arguments are written in the parathesis of the function call. 
+
+//RETURN keyword
+
+function returnName() { 
+    return "Brian"
+
+    console.log("Secret Message");
+}
+
+let userName = returnName(); 
+console.log(userName); 
+ 
+</script> 
+
+
+</body>
+</html>
