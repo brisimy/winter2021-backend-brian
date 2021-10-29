@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Pyramids Builder</title>
+</head>
+<body>
+    
+    <script>
+
+     
+        //console.log("*")
+        //console.log("**")
+        //console.log("***")
+
+        let pyramidColumn = "";
+        let pyramidHeight = 10;
+        for (let count = 0; count < pyramidHeight; count = count + 1){
+
+            pyramidColumn = pyramidColumn + "*"
+
+            //let pyramidColumn = "*" + "*";
+
+            console.log(pyramidColumn);
+        }
+
+        for (let count = 0; count < pyramidHeight - 1; count = count + 1){
+            console.log()
+
+            pyramidColumn = pyramidColumn + "*"
+
+
+            let pyramidArray = pyramidColumn.split("");
+
+            pyramidArray.pop();
+
+
+            let pyramidArrayResults = pyramidArray.join("");
+
+            console.log(pyramidArrayResults);
+}
+
+        ///let question = "How are you doing today?";
+        ///let question = "***";
+
+
+        ///console.log(question);
+
+        let questionArray = pyramidColumn.split("");
+
+        ///console.log(questionArray);
+
+        ///console.log(questionArray[23]);
+
+        //questionArray[23] = "!";
+        questionArray.pop();
+
+
+        ///console.log(questionArray);
+
+        let questionArrayResults = questionArray.join("");
+
+        ///console.log(questionArrayResults);
+        console.log(questionArrayResults);
+
+        function pyramidBuilder(){
+
+
+            
+        }
+
+    
+
+    </script>
+
+
+
+</body>
+</html>
