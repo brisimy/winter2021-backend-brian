@@ -13,15 +13,13 @@ number2 = parseInt(number2)
 
 
 if(Number.isNaN(number1)) || (Number.isNaN(number2)); {
-    console.log("Sorry but the value you provide is not a valid number.");
-
+    console.log("Sorry but the value you provide is not a valid number.");} 
     else {
         let sentence = "The sum of " + number1 + " and " +number2 + " is " + (number1 + number2) + ".";
     
     let sum = number1 + number2;
     console.log(sentence);
     }
-}
 
 
 
