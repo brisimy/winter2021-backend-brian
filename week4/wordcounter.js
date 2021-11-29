@@ -1,7 +1,10 @@
 const fs = require("fs");
 const process = require("process");
 //console.log(process.argv);
-const txtFile = fs.readFileSync("example.txt", "utf-8");
+const path = require("path");
+const file = fs.readFileSync(path.resolve(__dirname, "../file.txt"));
+//const txtFile = fs.readFileSync("./file.txt", "utf-8");
+//const txtFile = fs.readFileSync("essay.txt", "utf-8");
 //console.log(txtFile)
 let txtFileArray = txtFile.split(' ');
 //console.log(txtFileArray[0]);
