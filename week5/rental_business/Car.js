@@ -1,48 +1,56 @@
-import {Vehicle} from "./Vehicle.js";
-
+const Vehicle = require("./Vehicle.js")
 class Car extends Vehicle {
-    constructor(SuperData) {
+    constructor(superData, subData) {
         super(superData);
         this.year = subData.year;
-        this.wheels = subData.wheels  ;
+        this.wheels = subData.wheels;
         this.doors = subData.doors;
         this.vin = subData.vin;
         this.owner = subData.owner;
         this.engineHP = subData.engineHP;
-        this.fuelType = subData.fuelType; 
-        this.fuelCapacity = subData.fuelCapacity ;
+        this.miles = subData.miles;
+        this.lastMaintmiles = subData.lastMaintmiles;
+        this.fuelType = subData.fuelType;
+        this.fuelCapacity = subData.fuelCapacity;
         this.fuelCurrent = subData.fuelCurrent;
-        this.mpg = subData.mpg; 
+        this.mpg = subData.mpg;
         this.bodyType = subData.bodyType;
         this.gvwr = subData.gvwr;
-        
-
     }
+
+    run(miles) {
+        let maxDistance = this.fuelCurrent * this.mpg;
+
+        if (miles <= maxDistance) {
+            this.fuelCurrent = this.fuelCurrent - (miles / this.mpg);
+            console.log(`${this.make} ${this.model} has ${this.fuelCurrent} gallons left.`);
+        } else {
+            console.log(`${this.make} ${this.model} doesn't have enough fuel to go that far.`);
+        }   
+    }
+
+refuel(gallons) {
+    let tankFreeSpace = this.fuelCapacity - this.fuelCapacity;
+
+    if(tankFreeSpace >= gallons) {
+        this.fuelCapacity = this.fuelCurrent;
+    }
+
+
+
 }
 
-let honda = new Car({
-    name: "Honda",
-    make: "Honda",
-    model: "Accord",
-    occupancy: 5,
-    purchased: new Date("06/25/2020"),
+checkMaintenance() {
+    let milesSinceCheck = this.miles - this.lastMaintMiles;
 
-
-}, {
-    year:201,
-    wheels: 4,
-    doors: 4,
-    vin: "00243245234rsdfa",
-    engineHP:300,
-    fuelType: 21,
-    fuelCurrent: 10,
-    mpg: 14,
-    bodyType: "sedan",
-    gvwr: 4575,
-
+    if(milesSinceCheck >= 10000) {
+        console.log('The ${this.make} ${this.model} needs maintanence!')
+    }
+        else{
+            console.log("No maintanance is needed at the moment")
+        }
+}
 
 }
 
-
-
-);
+module.exports = Car;
