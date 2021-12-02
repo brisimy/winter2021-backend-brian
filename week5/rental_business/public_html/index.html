@@ -96,6 +96,10 @@
 
                 <label for="gvwr">Gross Vehicle Weight Rating (GVWR)</label> <br />
                 <input id="gvwr" type="number" /> <br />
+
+                <button> Cancel</button> <br />
+                <button>Create Entry</button> <br />
+
             </form>
 
         </div>
@@ -124,6 +128,24 @@
         $("#cancel").click(function () {
             $("#new-vehicle-form").css("display", "none");
             $("#new-vehicle-form form").trigger("reset");
+        });
+        
+        $("#submit").click(function(){
+            
+        });
+
+        $("#submit").click(function (){
+            let dataToSEnd = {
+                name: $("#name").val(),
+                make: $("#make").val(),
+                model: $("#model").val(),
+                year: parseInt($("#year").val()),
+                purchased: $("#purchased").val(),
+                vin: $("#vin").val(),
+                owner: $("#owner").val(),
+                miles: parseInt($("#miles").val()),
+                occupancy: $("#occunpancy").val()
+            };
         });
     });
 </script>
